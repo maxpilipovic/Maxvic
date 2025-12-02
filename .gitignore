@@ -1,0 +1,93 @@
+##############################
+# Visual Studio
+##############################
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.iml
+
+##############################
+# Build Output
+##############################
+bin/
+bin-int/
+
+# Covers Debug/Release/x64/x86 variations
+Debug*/
+Release*/
+x64/
+x86/
+
+##############################
+# Object / Intermediate Files
+##############################
+*.obj
+*.o
+*.pdb
+*.ilk
+*.idb
+*.aps
+*.pch
+*.tlog
+*.lastbuildstate
+*.ipch
+*.tlog
+*.cachefile
+*.log
+
+##############################
+# CMake / Premake
+##############################
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+*.make
+*.ninja
+*.ninja_log
+*.ninja_deps
+
+premake5.lua.bak
+
+##############################
+# IDE Specific
+##############################
+# VS Code
+.vscode/
+
+# CLion / JetBrains
+.idea/
+cmake-build-*/
+
+##############################
+# Binary Libraries
+##############################
+*.lib
+*.dll
+*.a
+*.so
+*.dylib
+
+##############################
+# OS Junk
+##############################
+.DS_Store
+Thumbs.db
+desktop.ini
+
+##############################
+# Engine Run-time Cache (Optional)
+##############################
+# If your engine will generate cached textures, shaders, etc.
+*.cache
+*.tmp
+
+##############################
+# Vendor Submodule Artifacts
+##############################
+# Keep vendor SOURCE but ignore built binaries
+vendor/**/bin/
+vendor/**/lib/
+vendor/**/build/
