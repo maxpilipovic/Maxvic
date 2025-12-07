@@ -4,7 +4,6 @@ namespace Maxvic
 {
 	Application::Application()
 	{
-
 	}
 
 	Application::~Application()
