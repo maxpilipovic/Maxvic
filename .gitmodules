@@ -1,0 +1,3 @@
+[submodule "Maxvic/vendor/spdlog"]
+	path = Maxvic/vendor/spdlog
+	url = https://github.com/gabime/spdlog
