@@ -4,6 +4,7 @@ namespace Maxvic
 {
 	Application::Application()
 	{
+
 	}
 
 	Application::~Application()
@@ -13,7 +14,7 @@ namespace Maxvic
 
 	void Application::Run()
 	{
-		while (true)
+		while (m_Running)
 		{
 
 		}

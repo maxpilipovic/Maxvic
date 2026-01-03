@@ -154,10 +154,12 @@
     <ClInclude Include="src\Maxvic\Core.h" />
     <ClInclude Include="src\Maxvic\EntryPoint.h" />
     <ClInclude Include="src\Maxvic\Logger.h" />
+    <ClInclude Include="src\Maxvic\Window.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Maxvic\Application.cpp" />
     <ClCompile Include="src\Maxvic\Logger.cpp" />
+    <ClCompile Include="src\Maxvic\Window.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

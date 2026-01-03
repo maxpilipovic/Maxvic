@@ -1,5 +1,9 @@
 #pragma once
+
+#include <memory>
+
 #include "Core.h"
+
 
 
 namespace Maxvic
@@ -13,6 +17,9 @@ namespace Maxvic
 		virtual ~Application();
 
 		void Run();
+
+	private:
+		bool m_Running = true;
 	};
 
 	//To be defined in client

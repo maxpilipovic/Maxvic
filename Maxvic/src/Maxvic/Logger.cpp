@@ -22,7 +22,7 @@ namespace Maxvic
 		s_ClientLogger->set_level(spdlog::level::trace);
 		s_ClientLogger->flush_on(spdlog::level::trace);
 
-		MV_CORE_INFO("Maxvic Logger initalized!");
+		MV_CORE_INFO("Maxvic Logger Initalized!");
 	}
 
 }

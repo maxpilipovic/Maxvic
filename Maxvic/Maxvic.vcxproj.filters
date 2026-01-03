@@ -19,12 +19,18 @@
     <ClInclude Include="src\Maxvic\Logger.h">
       <Filter>Maxvic</Filter>
     </ClInclude>
+    <ClInclude Include="src\Maxvic\Window.h">
+      <Filter>Maxvic</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Maxvic\Application.cpp">
       <Filter>Maxvic</Filter>
     </ClCompile>
     <ClCompile Include="src\Maxvic\Logger.cpp">
+      <Filter>Maxvic</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Maxvic\Window.cpp">
       <Filter>Maxvic</Filter>
     </ClCompile>
   </ItemGroup>
