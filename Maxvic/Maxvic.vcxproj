@@ -79,7 +79,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>MV_PLATFORM_WINDOWS;MV_BUILD_DLL;MV_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -101,7 +101,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>MV_PLATFORM_WINDOWS;MV_BUILD_DLL;MV_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -127,7 +127,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>MV_PLATFORM_WINDOWS;MV_BUILD_DLL;MV_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -153,13 +153,15 @@
     <ClInclude Include="src\Maxvic\Application.h" />
     <ClInclude Include="src\Maxvic\Core.h" />
     <ClInclude Include="src\Maxvic\EntryPoint.h" />
+    <ClInclude Include="src\Maxvic\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\Maxvic\Events\Event.h" />
+    <ClInclude Include="src\Maxvic\Events\KeyEvent.h" />
+    <ClInclude Include="src\Maxvic\Events\MouseEvent.h" />
     <ClInclude Include="src\Maxvic\Logger.h" />
-    <ClInclude Include="src\Maxvic\Window.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Maxvic\Application.cpp" />
     <ClCompile Include="src\Maxvic\Logger.cpp" />
-    <ClCompile Include="src\Maxvic\Window.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

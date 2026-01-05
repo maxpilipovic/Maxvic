@@ -4,8 +4,7 @@
 
 #include "spdlog/spdlog.h"
 #include "spdlog/sinks/stdout_color_sinks.h"
-#include "spdlog/sinks/basic_file_sink.h"
-#include <memory>
+#include <spdlog/fmt/ostr.h>
 
 //MACROS FOR LOGGER
 #define MV_CORE_TRACE(...) ::Maxvic::Logger::getCoreLogger()->trace(__VA_ARGS__)

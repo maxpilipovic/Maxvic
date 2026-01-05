@@ -1,8 +1,7 @@
 #pragma once
 
-#include <memory>
-
 #include "Core.h"
+#include "Events/Event.h"
 
 
 

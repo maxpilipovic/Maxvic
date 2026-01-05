@@ -9,3 +9,5 @@
 #else
 	#error Maxvic supports only Windows!
 #endif
+
+#define BIT(x) (1 << x)

@@ -4,6 +4,9 @@
     <Filter Include="Maxvic">
       <UniqueIdentifier>{6D579BC2-59F9-C598-42B4-D9EC2EF54CE9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Maxvic\Events">
+      <UniqueIdentifier>{B1C61029-1D87-8C5F-E6C1-D5DC5241D13B}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Maxvic.h" />
@@ -16,10 +19,19 @@
     <ClInclude Include="src\Maxvic\EntryPoint.h">
       <Filter>Maxvic</Filter>
     </ClInclude>
-    <ClInclude Include="src\Maxvic\Logger.h">
-      <Filter>Maxvic</Filter>
+    <ClInclude Include="src\Maxvic\Events\ApplicationEvent.h">
+      <Filter>Maxvic\Events</Filter>
     </ClInclude>
-    <ClInclude Include="src\Maxvic\Window.h">
+    <ClInclude Include="src\Maxvic\Events\Event.h">
+      <Filter>Maxvic\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Maxvic\Events\KeyEvent.h">
+      <Filter>Maxvic\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Maxvic\Events\MouseEvent.h">
+      <Filter>Maxvic\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Maxvic\Logger.h">
       <Filter>Maxvic</Filter>
     </ClInclude>
   </ItemGroup>
@@ -28,9 +40,6 @@
       <Filter>Maxvic</Filter>
     </ClCompile>
     <ClCompile Include="src\Maxvic\Logger.cpp">
-      <Filter>Maxvic</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Maxvic\Window.cpp">
       <Filter>Maxvic</Filter>
     </ClCompile>
   </ItemGroup>
