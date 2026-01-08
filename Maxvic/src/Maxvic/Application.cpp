@@ -1,3 +1,4 @@
+#include "mvpch.h"
 #include "Application.h"
 #include "Maxvic/Events/ApplicationEvent.h"
 #include "Maxvic/Logger.h"

@@ -1,9 +1,6 @@
 #pragma once
-
+#include "mvpch.h"
 #include "Maxvic/Core.h"
-
-#include <string>
-#include <functional>
 
 namespace Maxvic
 {

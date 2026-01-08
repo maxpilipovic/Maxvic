@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Maxvic
 {
 	class MAXVIC_API WindowResizeEvent : public Event

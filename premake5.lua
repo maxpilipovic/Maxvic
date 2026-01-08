@@ -18,6 +18,9 @@ project "Maxvic"
 	targetdir ("bin/" .. outputdir.. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir.. "/%{prj.name}")
 
+	pchheader "mvpch.h"
+	pchsource "Maxvic/src/mvpch.cpp"
+
 	files
 	{
 		"%{prj.name}/src/**.h",
@@ -44,7 +47,7 @@ project "Maxvic"
 
 		postbuildcommands
 		{
-			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox"),
+			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
 		}
 
 	filter "configurations:Debug"
