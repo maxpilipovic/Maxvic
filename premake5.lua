@@ -10,10 +10,17 @@ workspace "Maxvic"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Include directories relative to root folder (solution directory)
+IncludeDir = {}
+IncludeDir["GLFW"] = "Maxvic/vendor/GLFW/include"
+
+include "Maxvic/vendor/GLFW"
+
 project "Maxvic"
 	location "Maxvic"
 	kind "SharedLib"
 	language "C++"
+	
 
 	targetdir ("bin/" .. outputdir.. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir.. "/%{prj.name}")
@@ -30,7 +37,14 @@ project "Maxvic"
 	includedirs
 	{
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links
+	{
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"

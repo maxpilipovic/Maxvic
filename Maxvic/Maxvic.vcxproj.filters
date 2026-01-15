@@ -7,6 +7,12 @@
     <Filter Include="Maxvic\Events">
       <UniqueIdentifier>{B1C61029-1D87-8C5F-E6C1-D5DC5241D13B}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Maxvic.h" />
@@ -34,6 +40,12 @@
     <ClInclude Include="src\Maxvic\Logger.h">
       <Filter>Maxvic</Filter>
     </ClInclude>
+    <ClInclude Include="src\Maxvic\Window.h">
+      <Filter>Maxvic</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
     <ClInclude Include="src\mvpch.h" />
   </ItemGroup>
   <ItemGroup>
@@ -42,6 +54,9 @@
     </ClCompile>
     <ClCompile Include="src\Maxvic\Logger.cpp">
       <Filter>Maxvic</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowWindow.cpp">
+      <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\mvpch.cpp" />
   </ItemGroup>
