@@ -37,6 +37,12 @@
     <ClInclude Include="src\Maxvic\Events\MouseEvent.h">
       <Filter>Maxvic\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Maxvic\Layer.h">
+      <Filter>Maxvic</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Maxvic\LayerStack.h">
+      <Filter>Maxvic</Filter>
+    </ClInclude>
     <ClInclude Include="src\Maxvic\Logger.h">
       <Filter>Maxvic</Filter>
     </ClInclude>
@@ -50,6 +56,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Maxvic\Application.cpp">
+      <Filter>Maxvic</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Maxvic\Layer.cpp">
+      <Filter>Maxvic</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Maxvic\LayerStack.cpp">
       <Filter>Maxvic</Filter>
     </ClCompile>
     <ClCompile Include="src\Maxvic\Logger.cpp">
