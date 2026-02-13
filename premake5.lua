@@ -13,8 +13,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "Maxvic/vendor/GLFW/include"
+IncludeDir["Glad"] = "Maxvic/vendor/Glad/include"
 
 include "Maxvic/vendor/GLFW"
+include "Maxvic/vendor/Glad"
 
 project "Maxvic"
 	location "Maxvic"
@@ -38,12 +40,14 @@ project "Maxvic"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}"
 	}
 
 	links
 	{
 		"GLFW",
+		"Glad",
 		"opengl32.lib"
 	}
 
@@ -56,7 +60,8 @@ project "Maxvic"
 		defines
 		{
 			"MV_PLATFORM_WINDOWS",
-			"MV_BUILD_DLL"
+			"MV_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands

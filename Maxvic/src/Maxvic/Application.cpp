@@ -4,7 +4,7 @@
 #include "Maxvic/Logger.h"
 
 //temp
-#include <GLFW/glfw3.h>
+#include <glad/glad.h>
 
 namespace Maxvic
 {
