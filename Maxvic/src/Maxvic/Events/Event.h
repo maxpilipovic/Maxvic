@@ -15,7 +15,7 @@ namespace Maxvic
 		None = 0,
 		WindowClose, WindowResize, WindowFocus, WindowLostFocus, WindowMoved, //Window events
 		AppTick, AppUpdate, AppRender, //Application events
-		KeyPressed, KeyReleased, //Key events
+		KeyPressed, KeyReleased, KeyTyped, //Key events
 		MouseButtonPressed, MouseButtonReleased, MouseMoved, MouseScrolled //Mouse events
 	};
 

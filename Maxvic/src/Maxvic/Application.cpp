@@ -16,6 +16,7 @@ namespace Maxvic
 		s_Instance = this;
 
 		m_Window = std::unique_ptr<Window>(Window::Create());
+		m_Window->SetEventCallBack(MV_BIND_EVENT_FN(Application::onEvent));
 	}
 
 	Application::~Application()

@@ -20,3 +20,5 @@
 	#define MV_ASSERT(x, ...)
 	#define MV_CORE_ASSERT(x, ...)
 #endif
+
+#define MV_BIND_EVENT_FN(fn) std::bind(&fn, this, std::placeholders::_1)
