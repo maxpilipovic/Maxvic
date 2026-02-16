@@ -14,9 +14,11 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 IncludeDir = {}
 IncludeDir["GLFW"] = "Maxvic/vendor/GLFW/include"
 IncludeDir["Glad"] = "Maxvic/vendor/Glad/include"
+IncludeDir["ImGui"] = "Maxvic/vendor/imgui"
 
 include "Maxvic/vendor/GLFW"
 include "Maxvic/vendor/Glad"
+include "Maxvic/vendor/imgui"
 
 project "Maxvic"
 	location "Maxvic"
@@ -41,13 +43,15 @@ project "Maxvic"
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
 		"%{IncludeDir.GLFW}",
-		"%{IncludeDir.Glad}"
+		"%{IncludeDir.Glad}",
+		"%{IncludeDir.ImGui}"
 	}
 
 	links
 	{
 		"GLFW",
 		"Glad",
+		"ImGui",
 		"opengl32.lib"
 	}
 
@@ -66,7 +70,7 @@ project "Maxvic"
 
 		postbuildcommands
 		{
-			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
+			("{COPY} %{cfg.buildtarget.relpath} \"%{wks.location}/bin/" .. outputdir .. "/Sandbox\"")
 		}
 
 	filter "configurations:Debug"
@@ -91,6 +95,8 @@ project "Sandbox"
 
 	targetdir ("bin/" .. outputdir.. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir.. "/%{prj.name}")
+
+	debugdir ("bin/" .. outputdir.. "/%{prj.name}")
 
 	files
 	{

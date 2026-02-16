@@ -80,7 +80,7 @@
       <PrecompiledHeaderFile>mvpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>MV_PLATFORM_WINDOWS;MV_BUILD_DLL;GLFW_INCLUDE_NONE;MV_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -94,10 +94,8 @@
       <AdditionalDependencies>opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ImportLibrary>..\bin\Debug-windows-x86_64\Maxvic\Maxvic.lib</ImportLibrary>
     </Link>
-    <ProjectReference>
-    </ProjectReference>
     <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Debug-windows-x86_64\Maxvic\Maxvic.dll\ (xcopy /Q /E /Y /I ..\bin\Debug-windows-x86_64\Maxvic\Maxvic.dll "$(SolutionDir)\bin\Debug-windows-x86_64\Sandbox" &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Debug-windows-x86_64\Maxvic\Maxvic.dll "$(SolutionDir)\bin\Debug-windows-x86_64\Sandbox" &gt; nul)</Command>
+      <Command>IF EXIST ..\bin\Debug-windows-x86_64\Maxvic\Maxvic.dll\ (xcopy /Q /E /Y /I ..\bin\Debug-windows-x86_64\Maxvic\Maxvic.dll ..\bin\Debug-windows-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Debug-windows-x86_64\Maxvic\Maxvic.dll ..\bin\Debug-windows-x86_64\Sandbox &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -106,7 +104,7 @@
       <PrecompiledHeaderFile>mvpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>MV_PLATFORM_WINDOWS;MV_BUILD_DLL;GLFW_INCLUDE_NONE;MV_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -124,10 +122,8 @@
       <AdditionalDependencies>opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ImportLibrary>..\bin\Release-windows-x86_64\Maxvic\Maxvic.lib</ImportLibrary>
     </Link>
-    <ProjectReference>
-    </ProjectReference>
     <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Release-windows-x86_64\Maxvic\Maxvic.dll\ (xcopy /Q /E /Y /I ..\bin\Release-windows-x86_64\Maxvic\Maxvic.dll "$(SolutionDir)\bin\Release-windows-x86_64\Sandbox" &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Release-windows-x86_64\Maxvic\Maxvic.dll "$(SolutionDir)\bin\Release-windows-x86_64\Sandbox" &gt; nul)</Command>
+      <Command>IF EXIST ..\bin\Release-windows-x86_64\Maxvic\Maxvic.dll\ (xcopy /Q /E /Y /I ..\bin\Release-windows-x86_64\Maxvic\Maxvic.dll ..\bin\Release-windows-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Release-windows-x86_64\Maxvic\Maxvic.dll ..\bin\Release-windows-x86_64\Sandbox &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
@@ -136,7 +132,7 @@
       <PrecompiledHeaderFile>mvpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>MV_PLATFORM_WINDOWS;MV_BUILD_DLL;GLFW_INCLUDE_NONE;MV_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -154,10 +150,8 @@
       <AdditionalDependencies>opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ImportLibrary>..\bin\Dist-windows-x86_64\Maxvic\Maxvic.lib</ImportLibrary>
     </Link>
-    <ProjectReference>
-    </ProjectReference>
     <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Dist-windows-x86_64\Maxvic\Maxvic.dll\ (xcopy /Q /E /Y /I ..\bin\Dist-windows-x86_64\Maxvic\Maxvic.dll "$(SolutionDir)\bin\Dist-windows-x86_64\Sandbox" &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Dist-windows-x86_64\Maxvic\Maxvic.dll "$(SolutionDir)\bin\Dist-windows-x86_64\Sandbox" &gt; nul)</Command>
+      <Command>IF EXIST ..\bin\Dist-windows-x86_64\Maxvic\Maxvic.dll\ (xcopy /Q /E /Y /I ..\bin\Dist-windows-x86_64\Maxvic\Maxvic.dll ..\bin\Dist-windows-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Dist-windows-x86_64\Maxvic\Maxvic.dll ..\bin\Dist-windows-x86_64\Sandbox &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -169,22 +163,18 @@
     <ClInclude Include="src\Maxvic\Events\Event.h" />
     <ClInclude Include="src\Maxvic\Events\KeyEvent.h" />
     <ClInclude Include="src\Maxvic\Events\MouseEvent.h" />
-    <ClInclude Include="src\Maxvic\ImGui\ImGuiLayer.h" />
     <ClInclude Include="src\Maxvic\Layer.h" />
     <ClInclude Include="src\Maxvic\LayerStack.h" />
     <ClInclude Include="src\Maxvic\Logger.h" />
     <ClInclude Include="src\Maxvic\Window.h" />
-    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\mvpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Maxvic\Application.cpp" />
-    <ClCompile Include="src\Maxvic\ImGui\ImGuiLayer.cpp" />
     <ClCompile Include="src\Maxvic\Layer.cpp" />
     <ClCompile Include="src\Maxvic\LayerStack.cpp" />
     <ClCompile Include="src\Maxvic\Logger.cpp" />
-    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowWindow.cpp" />
     <ClCompile Include="src\mvpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
@@ -196,9 +186,6 @@
     </ProjectReference>
     <ProjectReference Include="vendor\Glad\Glad.vcxproj">
       <Project>{BDD6857C-A90D-870D-52FA-6C103E10030F}</Project>
-    </ProjectReference>
-    <ProjectReference Include="vendor\imgui\ImGui.vcxproj">
-      <Project>{C0FF640D-2C14-8DBE-F595-301E616989EF}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
