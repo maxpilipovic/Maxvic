@@ -4,3 +4,9 @@
 [submodule "Maxvic/vendor/GLFW"]
 	path = Maxvic/vendor/GLFW
 	url = https://github.com/TheCherno/glfw
+[submodule "Maxvic/vendor/glfw"]
+	path = Maxvic/vendor/glfw
+	url = https://github.com/TheCherno/glfw
+[submodule "Maxvic/vendor/imgui"]
+	path = Maxvic/vendor/imgui
+	url = https://github.com/TheCherno/imgui
